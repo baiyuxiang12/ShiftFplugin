@@ -17,6 +17,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 检查 pom.xml 是否存在
+      - name: Check if pom.xml exists
+        run: ls -la
+
       # 设置 JDK
       - name: Set up JDK
         uses: actions/setup-java@v4
