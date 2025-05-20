@@ -1,10 +1,7 @@
-name: Build and Test
+name: Build and Deploy
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
     branches:
       - main
 
@@ -13,25 +10,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 检出代码
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      # 检查 pom.xml 是否存在
-      - name: Check if pom.xml exists
-        run: ls -la
-
-      # 设置 JDK
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
 
-      # 构建项目
       - name: Build with Maven
-        run: mvn install
-        
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v4.6.2
-        
+        run: mvn clean package
+
+      - name: List target files
+        run: ls -la target/
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ShiftFplugin-JAR
+          path: target/ShiftFplugin-*.jar  # 确保文件存在
