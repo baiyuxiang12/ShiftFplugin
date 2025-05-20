@@ -11,8 +11,8 @@
 
     <repositories>
         <repository>
-            <id>spigotmc-release</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/releases/</url>
+            <id>spigotmc-snapshot</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
     </repositories>
 
@@ -20,7 +20,7 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.20.3</version>  <!-- 使用已知存在的版本 -->
+            <version>1.19.4-R0.1-SNAPSHOT</version>  <!-- 使用已知存在的版本 -->
             <scope>provided</scope>
         </dependency>
     </dependencies>
