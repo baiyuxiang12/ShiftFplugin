@@ -72,7 +72,7 @@ public class ShiftFPlugin extends JavaPlugin implements Listener, CommandExecuto
         }
         
         // 检查是否按下了F键（主手交互）
-        if (event.getAction().name().contains("RIGHT_CLICK")) {
+        if (event.getAction().name().contains("F")) {
             // 记录按下F键的时间
             lastFPressMap.put(playerId, System.currentTimeMillis());
             
