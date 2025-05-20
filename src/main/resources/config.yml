@@ -1,0 +1,9 @@
+# 配置文件
+# 当玩家按下Shift+F时将执行的命令（不需要包含斜杠）
+command: "say 你按下了Shift+F！"
+
+# 是否在执行命令后向玩家显示反馈信息
+show-feedback: true
+
+# 调试模式（设置为true时会在控制台输出更多信息）
+debug: false

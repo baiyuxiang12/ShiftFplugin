@@ -1,0 +1,18 @@
+name: ShiftFPlugin
+version: 1.0.0
+main: com.minecraft.shiftfplugin.ShiftFPlugin
+api-version: '1.21'
+description: 允许玩家按下shift+F时执行配置文件中指定的命令
+author: Manus
+commands:
+  shiftf:
+    description: 插件管理命令
+    usage: /shiftf reload - 重新加载配置文件
+    permission: shiftfplugin.admin
+permissions:
+  shiftfplugin.admin:
+    description: 允许使用插件管理命令
+    default: op
+  shiftfplugin.use:
+    description: 允许使用shift+F功能
+    default: true
